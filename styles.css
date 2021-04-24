@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+
+body{
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 100%;
+}
+
+.attribution{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+@media(min-width: 586px){
+    .attribution{
+    left: 0%;
+    }
+}
+
+/* header{
+    padding: 1.875em 0;
+}
+
+.container{
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.logo{
+    width: 6.25em;
+    margin-left: 1em;
+}
+
+.hero-img{
+    background-image: url("images/hero-mobile.jpg");
+    height: 15.625em;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.bg-gradient-color{
+    background-image: linear-gradient(135deg,hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    height: 100vh;
+}
+
+footer{
+    margin-top: 4em;
+}
+ */
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 85px 250px auto ;
+    height: 100vh;
+    grid-template-areas: 
+    "header"
+    "hero-image"
+    "hero-details";
+}
+
+.header{
+    grid-area: header;
+    padding: 1.875em 0 1.875em 1.875em ;
+}
+
+@media(min-width: 586px){
+    .header{
+        padding-top: 4.063em;
+        background-image: linear-gradient(135deg,hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    }
+}
+
+.hero-image{
+    background-image: url("images/hero-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-area: hero-image;
+}
+@media(min-width: 586px){
+    .hero-image{
+        background-image: url("images/hero-desktop.jpg");
+    }
+}
+
+
+.hero-details{
+    grid-area: hero-details;
+    background-image: linear-gradient(135deg,hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+
+@media(min-width: 586px){
+    .wrapper{
+        display: grid;
+        grid-template-columns: auto 610px;
+        grid-template-rows: .25fr auto;
+        grid-template-areas: 
+        "header hero-image"
+        "hero-details hero-image";
+    }
+}
+
+.container{
+    width: 90%;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.logo{
+    width: 105px;
+    height: 25px;
+}
+
+@media(min-width: 586px){
+    .logo{
+        width: 160px;
+        height: 35px;
+    }
+}
+
+span{
+    font-weight: 300;
+    color: hsl(0, 36%, 70%);
+}
+
+.heading{
+    padding-top: 3.1875rem;
+    font-size: 2.1875rem;
+    text-transform: uppercase;
+    text-align: center;
+    color:hsl(0, 6%, 24%);
+    letter-spacing: .675rem;
+}
+
+@media(min-width: 586px){
+    .heading{
+        font-size: 3.525rem;
+        text-align: left;
+        margin-top: 0.525em;
+        margin-bottom: .575em;
+    }
+}
+
+.hero-information{
+    text-align: center;
+    color: hsl(0, 36%, 70%);
+    padding-top: 1.5em;
+    padding-bottom: 2.500em;
+}
+
+@media(min-width: 586px){
+    .hero-information{
+        padding-top: 0;
+        text-align: left;
+        line-height: 2;
+    }
+}
+
+.d-flex{
+    display: flex;
+}
+
+#email{
+    color: black;
+    height: 2.8125em;
+    border: 1px solid silver;
+    border-radius: 100px;
+    margin-left: 1em;
+    padding-left:1em;
+    font-family: 'Josefin Sans', sans-serif;
+    width: 100%;
+    outline: none;
+}
+
+.icon{
+    background-image: url("images/icon-error.svg");
+    background-repeat: no-repeat;
+    background-position: 220px;
+}
+
+@media(min-width: 586px){
+    #email{
+        height: 3.438em;
+        margin-left: 0;
+        width: 80%;
+        background-position: 300px;
+    }
+}
+
+button{
+    align-self: stretch;
+    width: 5.175em;
+    border-radius: 100px;
+    border:none;
+    margin-left: -2.955em;
+    background-image: linear-gradient(135deg,hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    background-color:white;
+    position: relative;
+}
+
+@media(min-width: 586px){
+    button{
+        height: 3.738em;
+        margin-left: -2.955em;
+        width: 6.250em;
+    }
+}
+
+button:focus{
+    filter: brightness(130%);
+}
+
+#error{
+    color: hsl(0, 60%, 72.5%);
+    margin-top: 0.5em;
+    margin-left: 1em;
+}
+
+@media(min-width: 586px){
+    #error{
+        margin-left: 0;
+    }
+}
